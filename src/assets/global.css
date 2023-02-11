@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #5bb4d9;
+
+    --primary-bdr-radius: 4px;
+}
+
+/* utility classes */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    width: 78%;
+    margin: auto;
+    padding-bottom: 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.site-title {
+    color: var(--primary);
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: .5rem 0;
+}
+
+/* some shared styles  */
+.right-icon, .left-icon, .verified-icon, .property-dealer-icon, .property-card-icon{border-radius: 50%;}
+
+
+
+/* filters */
+.filters-container {
+    padding: .5rem 1.4rem;
+    background-color: #a6c6d321;
+}
+
+.filters-heading {
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    row-gap: .9rem;
+    flex-wrap: wrap;
+}
+
+.filter>select {
+    border: none;
+    background-color: transparent;
+    font-size: .82rem;
+    min-width: 5rem;
+    color: #00000078;
+    margin-right: .45rem;
+}
+
+/* propery section */
+.property-list-heading, .property-title, .property-details, .property-details-heading{font-weight: 600;}
+
+.property-list-heading{
+    font-size: 1.22rem;
+    margin: 1.9rem 0;
+}
+
+.property-list-container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(14.5rem, 16rem));
+    gap: 1.8rem 3.2rem;
+}
+
+
+/* property card */
+
+.property-card{
+    box-shadow: 0 0 5px 5px #00000014;
+    cursor: pointer;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.property-img{
+    width: 100%;
+    height: 12.5rem;
+}
+
+.property-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.verified-icon{
+    background-color: rgb(24, 180, 24);
+    color: white;
+    border-radius: 50%;
+    margin-right: 0.2rem;
+    font-size: 0.8rem;
+}
+
+.property-title{font-size: .9rem;}
+
+.property-dealer-icon{
+    width: 1.35rem;
+    border-radius: 50%;
+}
+
+.property-card-icon{
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+.property-details{
+    color: #5bb3d9c2;
+    font-size: .9rem;
+    display: flex;
+}
+
+.property-details > div{
+    padding-right: .8rem;
+    display: flex;
+    align-items: center;
+    padding-left: .35rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.616);
+}
+.property-details > div:nth-child(1){padding-left: 0;}
+
+.bath-icon, .bed-icon{
+    color: var(--primary);
+    margin-left: 0.5rem;
+}
+
+.bath-icon{
+    font-size: 1.02rem;
+}
+
+.bed-icon{
+    font-size: 1.25rem;
+}
+
+.property-features{
+    width: 65%;
+    color: #000000b8;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    font-size: .82rem;
+}
+
+.property-features > span{
+    padding-right: .4rem;
+}
+
+/* property details page */
+.property-details-section{
+    width: 70%;
+    margin: auto;
+}
+
+/* carausel */
+
+.carausel-container{
+    position: relative;
+    height: clamp(220px, 38vw, 45rem);
+}
+
+.carausel{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+.left-icon, .right-icon{
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: clamp(1.5rem, 2.35vw, 3.5rem);
+    top: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.left-icon{left: min(-2.7rem, -8%);}
+.right-icon{right: min(-2.7rem, -8%);}
+
+.carausel > img{min-width: 100%;}
+
+.property-details-heading{
+    font-size: 1.1rem;
+    margin-top: 2.8rem;
+    margin-bottom: 0.9rem;
+    overflow: visible;
+    white-space: normal;
+    width: 90%;
+}
+
+.property-details-description{
+    color: #808080ad;
+    line-height: 1.65;
+    font-size: .9rem;
+}
+
+.facilities-container{
+    width: 46%;
+    padding-left: .9rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.facilities-container > div{
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding: 0.4rem 0.5rem;
+    background-color: #96c5d836;
+
+    margin-bottom: 0.7rem;
+    min-width: max-content;
+    margin-left: 0.5rem;
+    border-radius: var(--primary-bdr-radius);
+}
+
+/* error and loading componenets */
+
+.loading-container,
+.error-container {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.default-loading-title,
+.default-error-title {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 2.45rem)
+}
+
+.default-loading-img,
+.default-error-img {
+    display: block;
+    margin: auto;
+}
+
+.default-loading-title {
+    margin-top: 2.5rem;
+    animation: fadeInFadeOut .8s 0s infinite ease forwards alternate;
+}
+
+@keyframes fadeInFadeOut {
+    100% {
+        color: #00000059;
+    }
+}
+
+.default-loading-img {width: 6.8rem;}
+
+.default-error-title {margin-top: 1rem;}
+
+.retry-btn {
+    border-radius: var(--primary-bdr-radius);
+    border: none;
+    background-color: #ff737d;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    padding: .4rem .8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.default-error-img {
+    width: clamp(4.8rem, 12vw, 15rem);
+    margin-top: 5rem;
+}
+
+.img-not-available{
+    background-color: rgba(0, 0, 0, 0.411);
+    padding: 4rem;
+    object-fit: contain;
+}
+
+@media  screen and (max-width: 870px) {
+    #root{
+        width: 90%;
+        padding-top: 1.25rem;
+    }
+
+    .property-list-container{
+        grid-template-columns: repeat(2, minmax(14.5rem, 16rem));
+        justify-content: center;
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    .property-details-section{
+        margin-top: 1.8rem;
+        width: 80%;
+    }
+}
+
+@media  screen and (max-width: 550px) {
+    .property-list-container{
+        grid-template-columns: repeat(1, minmax(14.5rem, 16rem));
+    }
+}
+
+@media  screen and (max-width: 545px) {
+    .property-details-section{
+        grid-template-columns: repeat(1, minmax(14.5rem, 16rem));
+    }
+}
+
+
+
